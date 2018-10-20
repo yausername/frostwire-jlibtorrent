@@ -246,10 +246,9 @@ before_deploy:
   - cd ../..
 
 deploy:
-  provider: s3
-  access_key_id: $S3_ACCESS_KEY
-  secret_access_key: $S3_SECRET_KEY
-  bucket: $S3_BUCKET
+  provider: releases
+  api_key:
+    secure: vg7bicUxU8asVbya8nIrRJrXADUIKUeGg197WUoNDCVVF/NPut6iMwZktXAgOvfWQJFxdrC/U4Btzq2d28sBEe3TR3L0WUykPaTdLuzMCXUVAkavpog/L31+fbt/SKWFXcpx/9zaZb8Z/FdV1lEfZvZvPougdfyf1LEt4XI8TLtqEA3/QaF70TEeAcT6VIDxZIbUsRZCOkwakNJ4oqUMKshjyEhR1Ynw6MI8I4MJvRLIzqWJwVz0tvzMXT13iNXBsJAv7QjAYOp4tlljxsp7x9+R51kfljdnMjAzucweT6HGsOoH4udq0xXbmxMJvXdGDys34Q/HP4A5+SACyV85D6emxeJwv1HpxfK8VNjqXm08F1VCo08yQJB3NKbOKvl1t/7poxbKimUx80PcbfMcw2xnYNPF8nUL0R2WhJn04jvSjPLy6mzzt2rZjr5WqOrXbJ53t+fWLetsWWUts7fUZttQ5osyLNfnKDYsRVmKpkN0HGQ8Au48fj5NiMM1ZDq/DGkEiEKE45QI9BjmYgmVnoaJmu27DoJsNvABKO4uB2KYKY3OA9gJohBKOKtSFeTNKLPRscuZKU3A8jVWPOdXyzFK5fVUBt/PP//ERocXYcRuBYz4OKDDMUEcMPYnOxKDqCa3w3x1KrsPzVRUIE5Lc/VC63964LeHct1ORioBsyg=
   skip_cleanup: true
   local_dir: swig/bin
   on:
